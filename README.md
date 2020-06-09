@@ -2,8 +2,10 @@
 Tugas JPA RSBK
 
 ### Instalasi:
-1. Download project ini sebagai zip.
+1. Download project ini sebagai zip
 2. Import project ke dalam Netbeans
+3. Import file surveymhs.sql ke dalam basis data
+4. Connect ke basis data melalui Netbenas.
 4. Klik kanan project >> Deploy
 5. Pada browser ketik: http://localhost:<port_no>/SurveyMhsJPA
 
