@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">  
+<h:head>  
+    <h2><center>Rekaman Data Survey</center></h2>  
+</h:head>  
+<h:body>  
+<h:form>  
+        <p:commandButton action="index?faces-redirect=true" icon="ui-icon-search" value="Kembali" />  
+    </h:form>
+    <h:panelGroup>  
+        <h3>Tambah Survey</h3>  
+        <h:form>  
+            <p>Nama:  
+                <p:inputText value="#{surveyBean.newsurvey.nama}" /></p>  
+            <p>Email:  
+                <p:inputText value="#{surveyBean.newsurvey.email}" /></p>
+            <p>Alamat:  
+                <p:inputText value="#{surveyBean.newsurvey.alamat}" /></p>
+            <p>Kota:  
+                <p:inputText value="#{surveyBean.newsurvey.kota}" /></p>
+        <p>Negara Bagian:  
+                <p:inputText value="#{surveyBean.newsurvey.negBag}" /></p>
+        <p>Kode POS :  
+                <p:inputText value="#{surveyBean.newsurvey.pos}" /></p>
+        
+        <p>Tanggal Survey:  
+                <p:calendar id="dop" value="#{surveyBean.newsurvey.tgl}" label="DatePosted:" required="true" pattern="dd/MMM/yyyy" effect="slideDown" requiredMessage="Please Enter Date of Posting!" navigator="true" showButtonPanel="true" yearRange="c-60:c+60" /> </p>
+            <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">  
+                <p>Apa yang Anda Sukai Tentang Kampus?</p>  
+                <p:selectOneMenu label="suka:" value="#{surveyBean.newsurvey.suka}" id="ulist2">  
+                    <f:selectItem itemLabel="Select One" itemValue="" />  
+                    <f:selectItem itemLabel="Siswa" itemValue="Siswa" />  
+                    <f:selectItem itemLabel="Lokasi" itemValue="Lokasi" /> 
+                    <f:selectItem itemLabel="Kampus" itemValue="Kampus" />  
+                    <f:selectItem itemLabel="Suasana" itemValue="Suasana" />
+                    <f:selectItem itemLabel="Kamar Asrama" itemValue="Kamar Asrama" /> 
+                </p:selectOneMenu>  
+            </h:panelGrid>
+                
+                <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">  
+                <p>Bagaimana Tertarik Dengan UNDIP?</p>  
+                <p:selectOneMenu label="how:" value="#{surveyBean.newsurvey.how}" id="ulist3">  
+                    <f:selectItem itemLabel="Select One" itemValue="" />  
+                    <f:selectItem itemLabel="Teman" itemValue="Teman" />  
+                    <f:selectItem itemLabel="Televisi" itemValue="Televisi" /> 
+                    <f:selectItem itemLabel="Internet" itemValue="Internet" />  
+                </p:selectOneMenu>  
+            </h:panelGrid> 
+                
+                <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">  
+                <p>Rekomendasikan UNDIP?</p>  
+                <p:selectOneMenu label="how:" value="#{surveyBean.newsurvey.rekomendasi}" id="ulist4">  
+                    <f:selectItem itemLabel="Select One" itemValue="" />  
+                    <f:selectItem itemLabel="Sangat Mungkin" itemValue="Sangat Mungkin" />  
+                    <f:selectItem itemLabel="Mungkin" itemValue="Mungkin" /> 
+                    <f:selectItem itemLabel="Tidak" itemValue="Tidak" />  
+                </p:selectOneMenu>  
+            </h:panelGrid> 
+              
+            <p>Komentar:  
+                <p:inputTextarea value="#{surveyBean.newsurvey.komentar}" /></p>  
+            <p>  
+                <p:commandButton icon="ui-icon-plusthick"  type="submit" value="add" action="#{surveyBean.addSurvey()}" /></p>  
+        </h:form>  
+    </h:panelGroup>  
+</h:body>  
+  
+</html>  
