@@ -1,5 +1,5 @@
 # Survey Minat Mahasiswa UNDIP
-Tugas JPA RSBK
+Tugas JPA RSBK - Menggunakan JSF dan Hibernate
 
 ### Instalasi:
 1. Download project ini sebagai zip
