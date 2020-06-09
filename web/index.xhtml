@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">  
+<h:head>  
+    <h2><center>Rekaman Data Survey</center></h2>  
+</h:head>  
+<h:body>  
+<h:form>  
+        <p:commandButton action="tambah?faces-redirect=true" icon="ui-icon-search" value="tambah Survey" />  
+    </h:form>
+  
+    <p:spacer> </p:spacer>  
+    <h:form id="form1">  
+        <p:dataTable id="dataTable" var="survey" paginator="true" rows="5" value="#{surveyBean.survey}">  
+            <p:column headerText="Nama">  
+                <h:outputText value="#{survey.nama}" />  
+            </p:column>  
+            <p:column headerText="Email">  
+                <h:outputText value="#{survey.email}" />  
+            </p:column>  
+  
+            <p:column headerText="Alamat">  
+                <h:outputText value="#{survey.alamat}" />  
+            </p:column>  
+            <p:column headerText="Tanggal Survey">  
+                <h:outputText value="#{survey.tgl}">  
+                    <f:convertDateTime type="date" pattern="dd-MMM-yyyy" />  
+                </h:outputText>  
+            </p:column>  
+            <p:column headerText="Kota">  
+                <h:outputText value="#{survey.kota}" />  
+            </p:column> 
+            
+            <p:column headerText="Negara Bagian">  
+                <h:outputText value="#{survey.negBag}" />  
+            </p:column>
+            <p:column headerText="Kode Pos">  
+                <h:outputText value="#{survey.pos}" />  
+            </p:column>
+            <p:column headerText="Hal Yang Disuka">  
+                <h:outputText value="#{survey.suka}" />  
+            </p:column>
+            <p:column headerText="Bagaimana Tertarik">  
+                <h:outputText value="#{survey.how}" />  
+            </p:column>
+            <p:column headerText="Rekomendasi">  
+                <h:outputText value="#{survey.rekomendasi}" />  
+            </p:column>
+            <p:column headerText="Komentar">  
+                <h:outputText value="#{survey.komentar}" />  
+            </p:column>
+            
+        </p:dataTable>  
+    </h:form>  
+
+</h:body>  
+  
+</html>  
